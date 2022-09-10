@@ -1,0 +1,137 @@
+/*font inpottada*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*resete da pagina*/
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing:border-box;
+    outline:nome;
+    font-family:"roboto",sans-serif;
+}
+
+:root{
+    --orange: rgb(255, 102, 0);
+    --blue: rgb(3, 0, 172);
+    --gray: rgb(90, 89, 102);
+}
+
+html,
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height:500px;
+    background:var(--orange);
+}
+
+/*abordagen responsiva para varios dispositivos*/
+.content {
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+/*configura o menu catalogo,sobre,recurso*/
+nav{
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;    
+    align-content: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 24px;
+    color:var(--blue);
+    cursor:pointer;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    list-style:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+nav ul li a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: rgb(53, 56, 58);
+}
+
+nav ul button{
+    border: 2px solid var(--blue);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left:25px;
+    color:var(--blue);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+nav ul button:hover{
+    transition: background,color 0.6s;
+    background: var(--blue);
+    color: white;
+}
+/*possição relativa*/
+.content .header-block{
+    max-width:1000px;
+    min-width:300px;
+    height:450px;
+    background: var(--blue);
+    border-radius:8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position:relative;
+    z-index: 10;
+    padding: 10px;
+
+}
+/*organiza img dentro do azul*/
+.header-block img{
+    width:50%;
+    position:absolute;
+    right:2%;
+    bottom:2%;
+}
+/*organiza o texto dentro do azul*/
+.header-block.text{
+    position: absolute;
+    bottom: 30%;
+    left:15%;
+
+}
+
+.header-block.text h2 {
+    color:beige;
+    margin-bottom:20px;
+    text-align:right;
+    transform: translateX(-20px);
+    transition: transform 0.5s;
+}
+
+.header-block.text p{
+    max-width:280px;
+    color:beige;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.4s;
+
+}
